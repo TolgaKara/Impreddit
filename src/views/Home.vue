@@ -5,7 +5,15 @@
 
 </template>
 
-<script>
+<script setup>
+  import API from '../lib/API'
 
-export default {};
+  async function getPosts() {
+    const postsData = await API.getPosts('all')
+    console.log(postsData);
+  }
+
+  getPosts()
+
+
 </script>
